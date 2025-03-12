@@ -4,5 +4,24 @@
 {% endblock %}
 
 {% block body %}
-	<p>Home</p>
+	{% for produits in Produits %}
+
+
+		<p class="has-text-primary" >Username :
+			{{produits.usename}}
+		</p>
+
+		<p>Email :
+			{{produits.email}}
+		</p>
+
+		<p>Password :
+			{{produits.password}}
+		</p>
+
+		<p>Size :
+			{{produits.size}}
+		</p>
+
+	{% endfor %}
 {% endblock %}

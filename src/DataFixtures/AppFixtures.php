@@ -28,6 +28,14 @@ class AppFixtures extends Fixture
 
         $manager->persist($produit);
 
+        $produit = new produits();
+        $produit -> setUsename("simo");
+        $produit ->setEmail("simo@gmail.com");
+        $produit ->setPassword(1234);
+        $produit ->setSize(100);
+
+        $manager->persist($produit);
+
         // Save the changes to the database
         $manager->flush();
     }
