@@ -4,24 +4,28 @@
 {% endblock %}
 
 {% block body %}
-	{% for produits in Produits %}
-
-
-		<p class="has-text-primary" >Username :
-			{{produits.usename}}
-		</p>
-
-		<p>Email :
-			{{produits.email}}
-		</p>
-
-		<p>Password :
-			{{produits.password}}
-		</p>
-
-		<p>Size :
-			{{produits.size}}
-		</p>
-
-	{% endfor %}
+    <table>
+        <thead>
+            <tr>
+                <th>Username</th>
+                <th>Email</th>
+                <th>Password</th>
+                <th>Size</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for produit in Produits %}
+                <tr>
+                    <td>
+											<a href="{{ path('product_show', {'id':produit.id} ) }}" >
+													{{ produit.usename }}
+											</a>
+										</td>
+                    <td>{{ produit.email }}</td>
+                    <td>{{ produit.password }}</td>
+                    <td>{{ produit.size }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
 {% endblock %}

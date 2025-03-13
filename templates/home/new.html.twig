@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+	<p>add memebrs</p>
+
+	{{ form_start(form) }}
+
+	{{ form_row(form.usename) }}
+
+	{{ form_row(form.email) }}
+
+	{{ form_row(form.password) }}
+
+	{{ form_row(form.size) }}
+
+	{{ form_row(form.add) }}
+
+	{{ form_end(form) }}
+
+
+{% endblock %}

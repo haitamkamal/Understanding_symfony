@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello DefaultController!
+{% endblock %}
+
+{% block body %}
+	<p>Hello</p>
+
+	<a href="{{ path('app_home')}}">see members</a>
+	<a href="{{ path('new_memeber') }}">add member</a>
+
+{% endblock %}
